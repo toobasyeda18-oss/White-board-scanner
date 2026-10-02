@@ -72,18 +72,3 @@ WER counts word substitutions, deletions, and insertions relative to transcript 
 ## Technologies
 
 Python, OpenCV, RapidOCR/ONNX Runtime, Streamlit, and pytest.
-
-## Limitations
-
-- The contour heuristic is not a learned whiteboard detector. It can miss boards with weak borders or select another large quadrilateral; in those cases it safely uses the full frame.
-- RapidOCR is pretrained for general scene text and may not reliably read handwriting, equations, symbols, glare, or dense tables.
-- The provided transcripts are the only available ground truth. Some may not exactly describe their paired images, and repeated labels require manual review.
-- The project does not train or fine-tune a model, and there are too few samples and no localization labels for defensible supervised training.
-- Dataset provenance is not recorded in the starter project.
-
-## Future Improvements
-
-- Verify dataset provenance and manually audit image/transcript pairs.
-- Add board corner annotations and a held-out split before measuring detector quality or training.
-- Evaluate OCR variants on verified labels, including handwriting-focused models where licensing and runtime requirements permit.
-- Add line/region review and user correction to support difficult handwriting and mathematical notation.
