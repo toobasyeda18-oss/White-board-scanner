@@ -51,7 +51,7 @@ Start the scanner:
 streamlit run src/app.py
 ```
 
-Evaluate OCR against the available transcripts:
+Evaluate OCR against the available transcripts
 
 ```powershell
 python -m src.evaluation
